@@ -13,7 +13,7 @@ Usage :
 
 import sys
 import yaml
-from src.Printer import Printer
+from src.Printer import Printer, Color
 
 
 if __name__ == "__main__":
@@ -44,8 +44,8 @@ if __name__ == "__main__":
     Printer.printTitle("cve report generator")
 
     # Print conf data
-    print("Name of the projet: " + Printer.boldText(Printer.blueText(conf["Project Name"])))
-    print("CVSS Environment Vector: " + Printer.boldText(Printer.blueText(conf["CVSS Environment Vector"])))
-    print("Number of dependencies: " + Printer.boldText(Printer.blueText(str(len(conf["COTS"])))))
+    print("Name of the projet: " + Printer.coloredText(conf["Project Name"], Color.CYAN + Color.BOLD))
+    print("CVSS Environment Vector: " + Printer.coloredText(conf["CVSS Environment Vector"], Color.CYAN + Color.BOLD))
+    print("Number of dependencies: " + Printer.coloredText(str(len(conf["COTS"])), Color.CYAN + Color.BOLD))
 
     # TODO: study
