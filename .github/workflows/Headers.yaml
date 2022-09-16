@@ -1,4 +1,4 @@
-name: Generate Header
+name: Generate Headers
 on: [push]
 jobs:
   Workspace-setup:
